@@ -140,5 +140,9 @@ async function handleMealClick(e) {
       mealDetails.classList.remove("hidden");
       mealDetails.scrollIntoView({ behavior: "smooth" });
     }
-  } catch (error) {}
+  } catch (error) {
+    errorContainer.textContent =
+      "Could not load recipe details. Please try again later.";
+    errorContainer.classList.add("hidden");
+  }
 }
